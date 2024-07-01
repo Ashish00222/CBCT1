@@ -28,7 +28,6 @@ void takeTurn(string player) {
 }
 
 string checkGameOver() {
-    // Check for a win
     if ((board[0] == board[1] && board[1] == board[2] && board[0] != "-") ||
         (board[3] == board[4] && board[4] == board[5] && board[3] != "-") ||
         (board[6] == board[7] && board[7] == board[8] && board[6] != "-") ||
@@ -39,17 +38,14 @@ string checkGameOver() {
         (board[2] == board[4] && board[4] == board[6] && board[2] != "-")) {
         return "win";
     }
-    // Check for a tie
     else if (count(board.begin(), board.end(), "-") == 0) {
         return "tie";
     }
-    // Game is not over
     else {
         return "play";
     }
 }
 
-// Define the main game loop
 int main() {
     printBoard();
     string currentPlayer = "X";
