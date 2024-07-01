@@ -4,17 +4,14 @@
 
 using namespace std;
 
-// Set up the game board as an array
 vector<string> board = {"-", "-", "-", "-", "-", "-", "-", "-", "-"};
 
-// Define a function to print the game board
 void printBoard() {
     cout << board[0] << " | " << board[1] << " | " << board[2] << endl;
     cout << board[3] << " | " << board[4] << " | " << board[5] << endl;
     cout << board[6] << " | " << board[7] << " | " << board[8] << endl;
 }
 
-// Define a function to handle a player's turn
 void takeTurn(string player) {
     cout << player << "'s turn." << endl;
     cout << "Choose a position from 1-9: ";
@@ -30,7 +27,6 @@ void takeTurn(string player) {
     printBoard();
 }
 
-// Define a function to check if the game is over
 string checkGameOver() {
     // Check for a win
     if ((board[0] == board[1] && board[1] == board[2] && board[0] != "-") ||
