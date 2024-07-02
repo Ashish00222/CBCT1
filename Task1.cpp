@@ -47,6 +47,7 @@ string checkGameOver() {
 }
 
 int main() {
+    cout<<"TIC-TAC-TOE"<<endl<<"Made by Ashish"<<endl;
     printBoard();
     string currentPlayer = "X";
     bool gameOver = false;
